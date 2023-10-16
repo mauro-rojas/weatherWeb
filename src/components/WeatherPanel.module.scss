@@ -1,0 +1,75 @@
+.container{
+    //background-color: rgb(31, 85, 47);
+    height: 66vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+    transition: all 0.3s ease;    
+
+}
+
+
+
+.containerChartForecast{
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+
+.grafico{    
+    //background-color: rgba(180, 67, 184, 0.479);   
+    display: flex; 
+    justify-content: center;
+    width: 42vw;
+    min-width: 391px;
+    height: 35vh;    
+    min-height: 197px;
+    max-height: 268px;
+    margin-bottom: 10px;    
+    
+}
+
+.graficoLightMode{
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+@media (max-width: 912px) { 
+    .container{
+        margin-top: 20px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .containerChartForecast{
+        margin: 0;
+        flex-direction: column-reverse;
+        width: 100vw;
+        margin-top: 3vw;
+        
+    }
+    .grafico{
+        width: 89vw;
+        margin-top: 20px;
+        height: 33vh;
+        min-height: auto;
+        min-width: auto;
+    }
+
+    
+}
+
+@media (540px < width <= 912px){
+    .grafico{
+        width: 86vw;
+        max-height: none;
+        height: 40vw;
+    }
+}

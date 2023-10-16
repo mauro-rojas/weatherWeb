@@ -1,0 +1,61 @@
+@import "./Normalize.css";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  -webkit-user-drag: none;
+  -ms-user-drag: none;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Estilo de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 7px; /* Ancho de la barra de desplazamiento vertical */
+  height: 7px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+/* Estilo del riel de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: #0000001f; /* Color de fondo del riel */
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+/* Estilo del pulgar (la parte arrastrable) de la barra de desplazamiento */
+::-webkit-scrollbar-thumb:vertical {
+  background: linear-gradient(to bottom , rgb(49, 143, 231) , rgb(52, 55, 228), rgb(49, 143, 231)); /* Color del pulgar */
+  border-radius: 5px; /* Borde redondeado del pulgar */
+  
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background: linear-gradient(to right , rgb(49, 143, 231) , rgb(52, 55, 228), rgb(49, 143, 231)); /* Color del pulgar */
+  border-radius: 5px; /* Borde redondeado del pulgar */
+  
+}
+
+/* Estilo del pulgar en estado hover (al pasar el cursor por encima) */
+/* ::-webkit-scrollbar-thumb:hover {
+  background-color: #555; // Color del pulgar al pasar el cursor 
+} */
+

@@ -1,0 +1,147 @@
+
+
+
+.searchBarContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;    
+    padding-bottom: 30px;
+    align-items: center;
+    transition: all 0.3s ease;
+    
+}
+
+.loadingContainer,
+.errorContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+    
+}
+
+.loadingAnimation{
+    height: 130px;    
+}
+
+.error{
+    height: 18vh;  
+}
+.errorLight{    
+   
+}
+
+.linkIcon{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgba(180, 130, 245, 0.445);
+}
+
+.initialBackground{    
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-size: 150px;    
+    z-index: -1;
+    filter: grayscale(100%);   
+    
+}
+
+.lightMode{
+    background-color: rgba(255, 255, 255, 0.952);
+    filter: grayscale(15%);
+} 
+
+.lightModeIcon{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin-left: 1vh;  
+    display: flex;
+    
+    img{
+        filter: saturate(300%) brightness(150%);
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        padding: 2px;
+        border: 1px solid black;
+        box-shadow: 0px 3px 10px -1px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+.lightModeIcon:hover{
+    filter: grayscale(100%);
+    transition: all 1s ease;
+}
+
+.darkModeIcon{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin-left: 1vh; 
+    display: flex;
+    img{
+        filter: saturate(300%) brightness(150%);
+        height: 50px;
+        border-radius: 50%;
+        padding: 2px;
+        border: 1px solid rgba(146, 87, 240, 0.432);
+        box-shadow: 0px 3px 10px -3px rgba(146, 87, 240, 0.726);
+        cursor: pointer;
+        user-select: none;
+
+    }
+}
+
+.darkModeIcon:hover{
+    filter: hue-rotate(340deg);
+    transition: all 1s ease;
+}
+
+
+
+@media (540px < width <= 912px){
+    .lightModeIcon,
+    .darkModeIcon{
+        position: absolute;
+        left: 75vw;
+        
+    }
+}
+@media (width <= 540px) { 
+
+
+    .lightModeIcon,
+    .darkModeIcon{
+        position: absolute;
+        left: 81vw;
+        
+    }
+
+    .lightModeIcon img,
+    .darkModeIcon img{
+        height: 6vh;
+        max-height: 50px;
+    }
+}
+
+@media (width < 300px) { 
+    .lightModeIcon,
+    .darkModeIcon{
+        position: absolute;
+        left: 82vw;
+        
+    }
+
+    .lightModeIcon img,
+    .darkModeIcon img{
+        height: 4.5vh;
+        max-height: 50px;
+    }
+}

@@ -1,0 +1,67 @@
+.formulario{
+    display: flex;
+}
+
+$bordes: 1px solid rgb(180, 67, 184);
+$focusColor: rgb(92, 75, 153);
+.formulario input {
+    width: 30vw;
+    padding: 9px;
+    border-left: $bordes;
+    border-top: $bordes;
+    border-bottom: $bordes;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    transition: border-color 0.3s ease;
+    outline: none;
+    
+    &:focus{            
+        border-left: 1px solid $focusColor;
+        border-top: 1px solid $focusColor;
+        border-bottom: 1px solid $focusColor;
+        ~button {
+            background-color: $focusColor;
+        }
+    }
+}
+
+.lightMode{
+    background-color: #ffffffd0;
+    color: #414141;
+    box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.5);
+    &::placeholder{
+        color: #414141;
+    }
+    ~button{
+        box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.darkMode{
+    box-shadow: 0px 3px 10px -1px rgba(146, 87, 240, 0.5);
+    ~button{
+        box-shadow: 0px 3px 10px -1px rgba(146, 87, 240, 0.5);
+    }
+}
+
+form.formulario button {
+background-color: rgb(180, 67, 184);
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius:  0 5px 5px 0;
+cursor: pointer;
+transition: background-color 0.3s ease; 
+display: flex;
+align-items: center;
+justify-content: center;   
+}
+
+
+@media (width < 912px){
+
+    .formulario input {
+        width: 40vw;
+    }
+
+}

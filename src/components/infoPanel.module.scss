@@ -1,0 +1,150 @@
+.infoPanel{    
+    width: 33vw; 
+    height: auto;    
+    background-color: rgba(15, 15, 15, 0.164);
+    border: 15px solid rgba(0, 0, 0, 0.005);    
+    border-radius: 20px;
+    margin: 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    user-select: none;
+    .icon{
+        height: 15vh;
+    }
+}
+
+.infoPanelLightMode{
+    background-color: rgba(0, 0, 0, 0.3);
+    img{
+        filter: saturate(200%) brightness(150%);
+    }
+
+}
+
+
+
+.text{
+    font-size: clamp(10px, 3vh, 48px);  
+    margin: 0;
+      
+}
+
+.cityText{
+    font-size: clamp(24px, 4vh, 48px);
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mainInfo{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;    
+    h2{
+        position: relative;
+        top: 20px;
+        font-size: clamp(24px, 7vh, 48px);
+        margin: 0;
+    }
+}
+
+.mainTemp{
+    font-size: clamp(24px, 5vh, 48px);
+}
+
+
+
+.details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    background-color: rgba(164, 122, 241, 0.08);
+    width: 100%;
+    border-radius: 2px;  
+    img{
+        height: clamp(24px, 4.5vh, 48px);
+        margin-right: 6px;
+    }
+}
+
+.detailsLightMode{
+    background-color: rgba(0, 0, 0, 0.15);
+    img{
+        filter: saturate(200%) brightness(150%);
+    }
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: clamp(12px, 3vh, 48px);
+    // background-color: #0000001a;
+    // border-radius: 20px;
+    // width: 80%;
+    
+}
+
+.background{    
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;     
+    opacity: 0.04;   
+    z-index: -1;
+    user-select: none;
+    
+}
+
+
+
+@media (max-width: 912px) {  
+    .infoPanel{
+        width: 80vw;
+        height: auto;
+        max-width: 378px;       
+    }
+    .text{
+        font-size: 4vw;
+    }
+    .mainInfo{
+        .icon{
+            height: 25vw;
+            max-height: 120px;
+        }
+        .mainTemp{
+            font-size: clamp(45px, 12vw, 55px);
+        }
+    }
+    .cityText{
+        font-size: clamp(30px, 10vw, 37px);
+        margin-top: 5px;
+    }
+    .details{
+        img{
+            height: 9vw;
+            max-height: 55px;
+            
+        }
+    }
+    .description{
+        font-size: clamp(25px, 10vw, 30px);
+    }
+    
+}    
+
+@media (min-width: 1290px) {
+
+    .infoPanel{
+        width: 22vw;  
+              
+    }
+}

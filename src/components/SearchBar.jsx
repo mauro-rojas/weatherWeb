@@ -33,7 +33,7 @@ export default function searchBar({onSubmit, lightMode}) {
                     name = "search" 
                     ref = {inputRef}
                     autoComplete = "off" 
-                    placeholder = "ciudad o codigo postal"
+                    placeholder = "ciudad o código postal"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}   
                 >

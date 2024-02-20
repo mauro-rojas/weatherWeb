@@ -81,8 +81,16 @@ export default function linesChart ({forecastData, dias, lightMode}){
                 legend:{
                     labels:{
                         color:`${lightMode ? "rgb(255, 255, 255)" : "rgba(255, 255, 255, 0.5)"}`,
+                    },
+                    onHover(event, chartElement){ 
+                      // console.log(event);
+                      // console.log(chartElement);
+                      // console.log(event.native.target.style.cursor);
+                      event.native.target.style.cursor = "pointer";
                     }
+                    
                 },
+                
                 
             },
             scales: {
@@ -103,10 +111,17 @@ export default function linesChart ({forecastData, dias, lightMode}){
                   },
                 },
             },
-              
+            layout: {
+              padding: {
+                left: 20,
+                right: 20,
+                top: 20,
+              },
+            },
+            
           };
 
-
+          
 
     return(
         <Line data ={myData} options = {myOptions}/>

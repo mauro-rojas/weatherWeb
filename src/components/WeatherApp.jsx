@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import SearchBar from "./SearchBar.jsx";
-import WeatherPanel from "./weatherPanel.jsx";
+import WeatherPanel from "./WeatherPanel.jsx";
 
 import loadingAnimation from "../assets/loading.svg";
 import errorIcon from "../assets/error.png";
 import lightModeIcon from "../assets/lightModeIcon.png";
 import darkModeIcon from "../assets/darkModeIcon.png";
 
-export default function weatherApp() {
+export default function WeatherApp() {
   let urlWeather =
     "https://api.openweathermap.org/data/2.5/weather?appid=61278724c50c328e4c73b194c725631f&lang=es";
 
